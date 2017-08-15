@@ -199,8 +199,13 @@
     <Compile Include="Migrations\201708150851474_test.Designer.cs">
       <DependentUpon>201708150851474_test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708151046566_Category.cs" />
+    <Compile Include="Migrations\201708151046566_Category.Designer.cs">
+      <DependentUpon>201708151046566_Category.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Order.cs" />
@@ -289,6 +294,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201708150851474_test.resx">
       <DependentUpon>201708150851474_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708151046566_Category.resx">
+      <DependentUpon>201708151046566_Category.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
