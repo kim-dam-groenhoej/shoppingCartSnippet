@@ -41,11 +41,20 @@ namespace shoppingCartSnippet.Controllers
         }
 
         [HttpPost]
-        public JsonResult AddToOrder(Product model)
+        public JsonResult AddToOrder(Product model, int quanity)
         {
             if (this.order != null)
             {
-                this.order
+                var orderDetail = new OrderDetail()
+                {
+                    Order = this.order,
+                    Product = model,
+                    Quanity = quanity
+                };
+
+                // Gemmer midlertidig i session
+                this.order.OrderDetails.Add(orderDetail);
+                HttpContext.Session["Order"] = this.order;
             } else
             {
                 return Json(new
